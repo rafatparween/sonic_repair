@@ -1,162 +1,172 @@
+// "use client";
+// import { useState, useEffect } from "react";
+// import Image from "next/image";
+// import { FaSearch, FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
+// import { useRouter } from "next/navigation";
+// import { useCart } from "../context/CartContext";
+// import Link from "next/link";
+
+// export default function Navbar() {
+//   const [menuOpen, setMenuOpen] = useState(false);
+//   const {  getTotalItems, isCartOpen, toggleCart } = useCart();
+//   // const cart = JSON.parse(localStorage.getItem("cart")) || [];
+//   const cart = typeof window !== "undefined"
+//   ? JSON.parse(localStorage.getItem("cart")) || []
+//   : [];
+  
+//   const router = useRouter();
+//  console.log("🛒 Current cart items in Navbar:", cart);
+//   return (
+//     <nav className="w-full bg-white shadow-sm border-b border-gray-200">
+//       <div className="max-w-[1360px] mx-auto px-4 py-4 flex items-center justify-between">
+//         {/* Logo + Nav */}
+//         <div className="flex items-center space-x-8">
+//           <Image src="/epslogo.png" alt="HP Logo" width={150} height={150} className="hover:scale-105 transition-transform"/>
+//           <div className="hidden md:flex space-x-12 text-[#767676] font-semibold text-base text-[20px]">
+//             <Link href="/" className="hover:text-black transition-colors duration-200">Explore</Link>
+//             <Link href="/" className="hover:text-black transition-colors duration-200">Shop</Link>
+//             <Link href="/" className="hover:text-black transition-colors duration-200">Support</Link>
+//           </div>
+//         </div>
+
+//         {/* Right */}
+//         <div className="hidden lg:flex items-center space-x-6">
+//           <div className="flex items-center w-80 border-2 border-gray-200 rounded-full px-4 py-2 hover:border-blue-500 transition-colors duration-200">
+//             <input type="text" placeholder="Search Printer Support" className="w-full outline-none text-gray-700 bg-transparent text-sm"/>
+//             <FaSearch className="text-gray-500 ml-2"/>
+//           </div>
+
+//           {/* Cart */}
+//           {/* <Link href="/cart">
+//           <div className="relative cursor-pointer" onClick={toggleCart}>
+//             <FaShoppingCart className="text-gray-700 text-xl"/>
+//             {getTotalItems() > 0 && (
+//               <span className="absolute -top-2 -right-2 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold bg-red-500 animate-pulse">
+//                 {getTotalItems()}
+//               </span>
+//             )}
+//           </div>
+//           </Link> */}
+          
+
+//           <Link href="/SignIn">
+//   <button
+//     className="hover:scale-105 px-8 py-2 font-semibold rounded-full transition-colors duration-200 shadow-md text-white"
+//     style={{ background: "linear-gradient(to right, #59c7b5, #0095d4)" }}
+//   >
+//     Sign in
+//   </button>
+// </Link>
+//         </div>
+
+//         {/* Mobile */}
+//         <div className="lg:hidden flex items-center space-x-4">
+//           <div className="relative cursor-pointer" onClick={toggleCart}>
+//             <FaShoppingCart className="text-gray-700 text-xl"/>
+//             {getTotalItems() > 0 && (
+//               <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
+//                 {getTotalItems()}
+//               </span>
+//             )}
+//           </div>
+//           <button onClick={() => setMenuOpen(!menuOpen)} className="text-2xl text-gray-700 focus:outline-none">
+//             {menuOpen ? <FaTimes /> : <FaBars />}
+//           </button>
+//         </div>
+//       </div>
+//     </nav>
+//   );
+// }
+
+
+
+
 "use client";
-import { useState } from "react";
-import Link from "next/link";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import { FaSearch, FaShoppingCart, FaBars, FaTimes, FaPhone } from "react-icons/fa";
+import { useRouter } from "next/navigation";
+import { useCart } from "../context/CartContext";
+import Link from "next/link";
 
-const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const {  getTotalItems, isCartOpen, toggleCart } = useCart();
+  // const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cart = typeof window !== "undefined"
+  ? JSON.parse(localStorage.getItem("cart")) || []
+  : [];
+  
+  const router = useRouter();
+ console.log("🛒 Current cart items in Navbar:", cart);
   return (
-    <nav className=" fixed top-3 left-0 right-0 z-50 h-[80px]">
-      <div className="max-w-[91%] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center ">
-  <Link href="/">
-    <Image
-      src="/msr.png"     // <-- put your logo image path here
-      alt="Micro Sonic Repair Logo"
-      width={140}         // adjust size
-      height={50}
-      className="object-contain"
-    />
-  </Link>
-</div>
-
-          {/* Desktop Menu */}
-          {/* <div className="hidden lg:flex lg:items-center lg:space-x-8">
-            <Link
-              href="/"
-              className="text-gray-900 hover:text-[#1C8DCEED] px-3 py-2 rounded-md text-xl font-medium hover:border border-[#1C8DCEED]"
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="hover:border border-[#1C8DCEED] text-gray-900 hover:text-[#1C8DCEED] px-3 py-2 rounded-md text-xl font-medium"
-            >
-              About
-            </Link>
-            <Link
-              href="/service"
-              className="hover:border border-[#1C8DCEED] text-gray-900 hover:text-[#1C8DCEED] px-3 py-2 rounded-md text-xl font-medium"
-            >
-              Service
-            </Link>
-            <Link
-              href="/product"
-              className="hover:border border-[#1C8DCEED] text-gray-900 hover:text-[#1C8DCEED] px-3 py-2 rounded-md text-xl font-medium"
-            >
-              Product
-            </Link>
-            <Link
-              href="/contact"
-              className="hover:border border-[#1C8DCEED] text-gray-900 hover:text-[#1C8DCEED] px-3 py-2 rounded-md text-xl font-medium"
-            >
-              Contact
-            </Link>
-            <Link
-              href="/membership"
-              className="hover:border border-[#1C8DCEED] text-gray-900 hover:text-[#1C8DCEED] px-3 py-2 rounded-md text-xl font-medium"
-            >
-              Membership
-            </Link>
-          </div> */}
-
-          {/* Mobile menu button */}
-          <div className="flex items-center lg:hidden">
-            <button
-              type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 focus:text-gray-500"
-              aria-controls="mobile-menu"
-              aria-expanded={isMobileMenuOpen}
-              onClick={toggleMobileMenu}
-            >
-              <span className="sr-only">Open main menu</span>
-              <svg
-                className={`${isMobileMenuOpen ? "hidden" : "block"} h-6 w-6`}
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              </svg>
-              <svg
-                className={`${isMobileMenuOpen ? "block" : "hidden"} h-6 w-6`}
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
+    <nav className="w-full bg-white shadow-sm border-b border-gray-200">
+      <div className="max-w-[1360px] mx-auto px-4 py-4 flex items-center justify-between">
+        {/* Logo + Nav */}
+        <div className="flex items-center space-x-8">
+          <Image src="/epslogo.png" alt="HP Logo" width={150} height={150} className="hover:scale-105 transition-transform"/>
+          <div className="hidden md:flex space-x-12 text-[#767676] font-semibold text-base text-[20px]">
+            <Link href="/" className="hover:text-black transition-colors duration-200">Explore</Link>
+            <Link href="/" className="hover:text-black transition-colors duration-200">Shop</Link>
+            <Link href="/" className="hover:text-black transition-colors duration-200">Support</Link>
           </div>
         </div>
-      </div>
 
-      {/* Mobile Menu */}
-      {/* <div
-        className={`${isMobileMenuOpen ? "block" : "hidden"} lg:hidden`}
-        id="mobile-menu"
-      >
-        <div className="px-2 pt-2 pb-3 space-y-1">
-          <Link
-            href="/"
-            className="hover:border border-[#0f766e] text-gray-900 hover:text-[#0f766e] block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className="hover:border border-[#0f766e] text-gray-900 hover:text-[#0f766e] block px-3 py-2 rounded-md text-base font-medium"
-          >
-            About
-          </Link>
-          <Link
-            href="/service"
-            className="hover:border border-[#0f766e] text-gray-900 hover:text-[#0f766e] block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Service
-          </Link>
-          <Link
-            href="/product"
-            className="hover:border border-[#0f766e] text-gray-900 hover:text-[#0f766e] block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Product
-          </Link>
-          <Link
-            href="/contact"
-            className="hover:border border-[#0f766e] text-gray-900 hover:text-[#0f766e] block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Contact
-          </Link>
-          <Link
-            href="/membership"
-            className="hover:border border-[#0f766e] text-gray-900 hover:text-[#0f766e] block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Membership
-          </Link>
+        {/* Right */}
+        <div className="hidden lg:flex items-center space-x-6">
+          <div className="flex flex-col items-center w-80">
+            <div className="flex items-center justify-center gap-2 mb-2 w-full group cursor-pointer px-4">
+              <div className="bg-gradient-to-r from-[#59c7b5] to-[#0095d4] p-1.5 rounded-full group-hover:scale-110 transition-all duration-300 shadow-md">
+                <FaPhone className="text-white text-xs" />
+              </div>
+              <span className="text-[18px] font-bold bg-gradient-to-r from-[#59c7b5] to-[#0095d4] bg-clip-text text-transparent group-hover:scale-105 transition-all duration-300 whitespace-nowrap">
+                Call Us <span className="text-gray-900 font-extrabold drop-shadow-sm">+1 (844) 491-5152</span>
+              </span>
+            </div>
+            <div className="flex items-center w-full border-2 border-gray-200 rounded-full px-4 py-2.5 hover:border-blue-500 transition-all duration-300 shadow-sm hover:shadow-md">
+              <input type="text" placeholder="Search Printer Support" className="w-full outline-none text-gray-700 bg-transparent text-sm placeholder-gray-400"/>
+              <FaSearch className="text-gray-500 ml-2 hover:text-blue-500 transition-colors duration-200"/>
+            </div>
+          </div>
+
+          {/* Cart */}
+          {/* <Link href="/cart">
+          <div className="relative cursor-pointer" onClick={toggleCart}>
+            <FaShoppingCart className="text-gray-700 text-xl"/>
+            {getTotalItems() > 0 && (
+              <span className="absolute -top-2 -right-2 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold bg-red-500 animate-pulse">
+                {getTotalItems()}
+              </span>
+            )}
+          </div>
+          </Link> */}
+          
+
+          <Link href="/SignIn">
+  <button
+    className="hover:scale-105 px-8 py-2 font-semibold rounded-full transition-colors duration-200 shadow-md text-white"
+    style={{ background: "linear-gradient(to right, #59c7b5, #0095d4)" }}
+  >
+    Sign in
+  </button>
+</Link>
         </div>
-      </div> */}
+
+        {/* Mobile */}
+        <div className="lg:hidden flex items-center space-x-4">
+          <div className="relative cursor-pointer" onClick={toggleCart}>
+            <FaShoppingCart className="text-gray-700 text-xl"/>
+            {getTotalItems() > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
+                {getTotalItems()}
+              </span>
+            )}
+          </div>
+          <button onClick={() => setMenuOpen(!menuOpen)} className="text-2xl text-gray-700 focus:outline-none">
+            {menuOpen ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
+      </div>
     </nav>
   );
-};
-
-export default Navbar;
+}

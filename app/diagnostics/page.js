@@ -1,398 +1,313 @@
-"use client"
-import { FaPowerOff, FaWifi, FaPrint, FaTint, FaTools, FaQuestionCircle, FaHeadset, FaSyncAlt, FaDownload, FaCog } from 'react-icons/fa';
-import { MdOutlineSettings, MdOutlineMemory, MdOutlineDevices, MdOutlineFactory } from 'react-icons/md';
-import { RiHealthBookLine } from 'react-icons/ri';
+// "use client";
+// import { useState } from "react";
+// import {
+//   Power,
+//   Wifi,
+//   Printer,
+//   Droplets,
+//   Settings,
+//   Wrench,
+//   Download,
+//   Monitor,
+//   Factory,
+//   Heart,
+//   Headphones,
+//   RotateCcw,
+//   Zap,
+//   Shield,
+//   CheckCircle,
+//   AlertTriangle,
+//   Clock,
+//   Users,
+//   Star,
+// } from "lucide-react";
+
+// const PrinterDiagnosticsGuide = () => {
+//   const [selectedIssue, setSelectedIssue] = useState(null);
+
+//   const issues = [
+//     {
+//       id: 1,
+//       title: "Printer Not Turning On",
+//       description: "Learn what to do if your printer won't power up.",
+//       icon: Power,
+//       steps: [
+//         "Check if the power cable is properly connected to both the printer and the wall socket.",
+//         "Ensure the power switch is turned ON.",
+//         "Try a different power outlet.",
+//         "If still not working, unplug the printer for 60 seconds and try again.",
+//       ],
+//     },
+//     {
+//       id: 2,
+//       title: "Wi-Fi Connection Problems",
+//       description: "Fix wireless printer connection issues.",
+//       icon: Wifi,
+//       steps: [
+//         "Ensure the printer Wi-Fi is turned ON.",
+//         "Restart your router and printer.",
+//         "Check if your printer is connected to the same Wi-Fi as your device.",
+//         "Re-run the Wi-Fi setup from the printer's settings menu.",
+//       ],
+//     },
+//     {
+//       id: 3,
+//       title: "Ink or Toner Problems",
+//       description: "Resolve low ink, empty cartridge, or streaky prints.",
+//       icon: Droplets,
+//       steps: [
+//         "Check the ink or toner level in the printer software.",
+//         "Replace any empty cartridges.",
+//         "Run the printer's cleaning or alignment utility.",
+//         "Avoid using non-genuine ink or toner cartridges.",
+//       ],
+//     },
+//     {
+//       id: 4,
+//       title: "Paper Jams or Feeding Errors",
+//       description: "Steps to remove and prevent paper jams.",
+//       icon: Printer,
+//       steps: [
+//         "Turn off the printer and unplug it.",
+//         "Open all access doors and gently remove jammed paper.",
+//         "Ensure paper is properly aligned in the tray.",
+//         "Avoid overloading the paper tray.",
+//       ],
+//     },
+//     {
+//       id: 5,
+//       title: "Software or Driver Issues",
+//       description: "Troubleshoot printer software or driver errors.",
+//       icon: Download,
+//       steps: [
+//         "Reinstall the latest printer driver from the manufacturer’s website.",
+//         "Restart your computer after installation.",
+//         "Ensure your printer is selected as the default device.",
+//       ],
+//     },
+//     {
+//       id: 6,
+//       title: "Print Quality Problems",
+//       description: "Fix faded, blurred, or smudged prints.",
+//       icon: Wrench,
+//       steps: [
+//         "Check if you’re using the correct paper type.",
+//         "Run a print head cleaning cycle.",
+//         "Ensure cartridges are properly installed.",
+//         "Avoid touching the print head nozzles.",
+//       ],
+//     },
+//     {
+//       id: 7,
+//       title: "Slow Printing Speed",
+//       description: "Improve your printer’s performance.",
+//       icon: Clock,
+//       steps: [
+//         "Switch to draft mode for faster printing.",
+//         "Use a wired connection for large print jobs.",
+//         "Avoid high-resolution printing for simple documents.",
+//       ],
+//     },
+//     {
+//       id: 8,
+//       title: "Overheating Printer",
+//       description: "What to do when your printer gets too hot.",
+//       icon: Zap,
+//       steps: [
+//         "Turn off the printer and let it cool down for 10 minutes.",
+//         "Ensure proper ventilation around the printer.",
+//         "Avoid continuous heavy-duty printing.",
+//       ],
+//     },
+//     {
+//       id: 9,
+//       title: "Security or Privacy Concerns",
+//       description: "Protect your printer and documents.",
+//       icon: Shield,
+//       steps: [
+//         "Change your printer’s default admin password.",
+//         "Keep firmware up to date.",
+//         "Disable remote printing if not needed.",
+//       ],
+//     },
+//   ];
+
+//   const toggleIssue = (id) => {
+//     setSelectedIssue(selectedIssue === id ? null : id);
+//   };
+
+//   return (
+//     <div className="bg-gradient-to-br from-blue-50 to-white min-h-screen py-12 px-6">
+//       <div className="max-w-5xl mx-auto text-center mb-12">
+//         <h1 className="text-4xl font-bold text-blue-700 mb-4">
+//           Printer Diagnostics Guide
+//         </h1>
+//         <p className="text-gray-600">
+//           Quickly diagnose and fix common printer issues with step-by-step
+//           guidance.
+//         </p>
+//       </div>
+
+//       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+//         {issues.map((issue) => (
+//           <div
+//             key={issue.id}
+//             className="bg-white shadow-md rounded-2xl p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+//           >
+//             <div className="flex items-center gap-4 mb-4">
+//               <div className="bg-blue-600 p-3 rounded-full">
+//                 <issue.icon className="w-8 h-8 text-white" />
+//               </div>
+//               <h2 className="text-xl font-semibold text-gray-800">
+//                 {issue.title}
+//               </h2>
+//             </div>
+//             <p className="text-gray-500 mb-4">{issue.description}</p>
+//             <button
+//               onClick={() => toggleIssue(issue.id)}
+//               className="text-blue-600 font-medium hover:underline"
+//             >
+//               {selectedIssue === issue.id ? "Hide Steps" : "View Steps"}
+//             </button>
+
+//             {selectedIssue === issue.id && (
+//               <ul className="mt-4 list-decimal pl-6 text-gray-700 text-left space-y-2">
+//                 {issue.steps.map((step, index) => (
+//                   <li key={index}>{step}</li>
+//                 ))}
+//               </ul>
+//             )}
+//           </div>
+//         ))}
+//       </div>
+
+//       <div className="text-center mt-16">
+//         <div className="flex justify-center items-center gap-3 text-blue-700 mb-3">
+//           <Headphones className="w-6 h-6" />
+//           <p className="font-semibold text-lg">
+//             Need more help? Contact our support team.
+//           </p>
+//         </div>
+//         <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full shadow-md">
+//           Start Live Chat
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default PrinterDiagnosticsGuide;
+
+
+
+"use client";
+import { useState } from "react";
+import Head from "next/head";
 
 export default function PrinterDiagnosticsGuide() {
-  const manufacturers = [
-    { name: "HP", tool: "HP Print and Scan Doctor" },
-    { name: "Canon", tool: "Canon IJ Printer Assistant Tool" },
-    { name: "Epson", tool: "Epson Printer Utility" },
-    { name: "Brother", tool: "Brother Printer Diagnostic Tool" },
-    { name: "Lexmark", tool: "Lexmark Printer Diagnostics" },
-    { name: "Xerox", tool: "Xerox Print Diagnostics" }
-  ];
+  const [expandedFaq, setExpandedFaq] = useState(null);
 
-  const benefits = [
-    { icon: <RiHealthBookLine className="text-blue-500" />, text: "Detect hardware or software issues early" },
-    { icon: <FaPrint className="text-blue-500" />, text: "Improve print quality and speed" },
-    { icon: <FaWifi className="text-blue-500" />, text: "Fix connectivity problems" },
-    { icon: <MdOutlineMemory className="text-blue-500" />, text: "Extend printer lifespan" }
-  ];
+  const toggleFaq = (index) => setExpandedFaq(expandedFaq === index ? null : index);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-blue-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center px-6 py-2 bg-blue-100 rounded-full mb-4">
-            <RiHealthBookLine className="h-5 w-5 text-blue-600 mr-2" />
-            <span className="text-blue-600 font-medium">Printer Maintenance</span>
-          </div>
-          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl mb-4">
-            <span className="text-blue-600">Printer Diagnostics</span> Guide
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            A complete guide to help you run tests, identify issues, and restore your printer's performance — from connection checks to print quality tests.
-          </p>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12">
+      <Head>
+        <title>Printer Diagnostics | EzTech-Printer-Solutions</title>
+      </Head>
 
-        {/* Benefits Section */}
-        <div className="bg-white shadow-xl rounded-2xl p-8 mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-            Why Run Printer Diagnostics?
-          </h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mx-auto mb-4">
-                  {benefit.icon}
-                </div>
-                <p className="text-lg font-medium text-gray-800">{benefit.text}</p>
-              </div>
-            ))}
+      {/* Header */}
+      <div className="text-center mb-16">
+        <div className="flex justify-center mb-6">
+          <div className="w-20 h-20 bg-gradient-to-br from-[#59c7b5] to-[#0095d4] rounded-2xl shadow-xl flex items-center justify-center text-white text-4xl font-bold">
+            🔧
           </div>
         </div>
+        <h1 className="text-5xl font-bold text-gray-800 mb-4">
+          Complete Printer Diagnostics & Repair
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          Our diagnostic checks identify and fix hidden issues in your printer's hardware, drivers, and settings.
+        </p>
+      </div>
 
-        {/* Steps Section */}
-        <div className="bg-white shadow-xl rounded-2xl overflow-hidden mb-12">
-          <div className="bg-blue-600 px-6 py-4">
-            <h2 className="text-2xl font-bold text-white flex items-center">
-              <FaTools className="mr-2" />
-              Step-by-Step Printer Diagnostics Guide
-            </h2>
-          </div>
-          <div className="p-6">
-            <div className="space-y-10">
-              {/* Step 1 */}
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="md:w-1/4">
-                  <div className="flex items-center justify-center h-14 w-14 rounded-full bg-blue-100 text-blue-600 text-xl font-bold">
-                    1
-                  </div>
-                </div>
-                <div className="md:w-3/4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3 flex items-center">
-                    <FaPowerOff className="text-blue-500 mr-2" />
-                    Check Power & Basic Setup
-                  </h3>
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                    <li>Make sure the printer is plugged in securely and switched ON.</li>
-                    <li>Check the display panel for any error messages or blinking lights.</li>
-                    <li>If nothing happens, try a different power outlet.</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Step 2 */}
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="md:w-1/4">
-                  <div className="flex items-center justify-center h-14 w-14 rounded-full bg-blue-100 text-blue-600 text-xl font-bold">
-                    2
-                  </div>
-                </div>
-                <div className="md:w-3/4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3 flex items-center">
-                    <FaWifi className="text-blue-500 mr-2" />
-                    Verify Printer Connections
-                  </h3>
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                    <li><strong>USB Connection:</strong> Ensure cable is firmly connected to both printer and computer.</li>
-                    <li><strong>Wi-Fi Connection:</strong> Check your printer's wireless icon — it should be steady, not blinking.</li>
-                    <li>Reconnect to the network if disconnected.</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Step 3 */}
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="md:w-1/4">
-                  <div className="flex items-center justify-center h-14 w-14 rounded-full bg-blue-100 text-blue-600 text-xl font-bold">
-                    3
-                  </div>
-                </div>
-                <div className="md:w-3/4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3 flex items-center">
-                    <FaPrint className="text-blue-500 mr-2" />
-                    Run Built-in Printer Self-Test
-                  </h3>
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                    <li>Most printers have a self-test or demo page option.</li>
-                    <li>On the printer's control panel, go to Settings &gt; Reports &gt; Print Test Page.</li>
-                    <li>If the page prints fine, your hardware is okay — the issue may be software-related.</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Step 4 */}
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="md:w-1/4">
-                  <div className="flex items-center justify-center h-14 w-14 rounded-full bg-blue-100 text-blue-600 text-xl font-bold">
-                    4
-                  </div>
-                </div>
-                <div className="md:w-3/4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3 flex items-center">
-                    <FaTint className="text-blue-500 mr-2" />
-                    Check Ink or Toner Levels
-                  </h3>
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                    <li>On the printer's display or computer software, view ink/toner status.</li>
-                    <li>If low, replace cartridges or refill toner.</li>
-                    <li>Sometimes, even half-full cartridges can cause print quality issues — try cleaning the printhead.</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Step 5 */}
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="md:w-1/4">
-                  <div className="flex items-center justify-center h-14 w-14 rounded-full bg-blue-100 text-blue-600 text-xl font-bold">
-                    5
-                  </div>
-                </div>
-                <div className="md:w-3/4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3 flex items-center">
-                    <RiHealthBookLine className="text-blue-500 mr-2" />
-                    Print Quality Test
-                  </h3>
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                    <li>Open printer software on your PC.</li>
-                    <li>Select Tools &gt; Print Quality Diagnostics Page.</li>
-                    <li>This page shows if colors are missing, faded, or misaligned.</li>
-                    <li>Follow on-screen instructions to fix detected issues.</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Step 6 */}
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="md:w-1/4">
-                  <div className="flex items-center justify-center h-14 w-14 rounded-full bg-blue-100 text-blue-600 text-xl font-bold">
-                    6
-                  </div>
-                </div>
-                <div className="md:w-3/4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3 flex items-center">
-                    <FaTools className="text-blue-500 mr-2" />
-                    Clean & Align Printhead
-                  </h3>
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                    <li>Go to Maintenance &gt; Clean Printhead.</li>
-                    <li>For alignment, choose Align Printer from the same menu.</li>
-                    <li>This helps fix blurry text, faded prints, or wrong color output.</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Step 7 */}
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="md:w-1/4">
-                  <div className="flex items-center justify-center h-14 w-14 rounded-full bg-blue-100 text-blue-600 text-xl font-bold">
-                    7
-                  </div>
-                </div>
-                <div className="md:w-3/4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">
-                    Check for Paper Feed Problems
-                  </h3>
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                    <li>Remove all paper and check for dust, curled edges, or jams.</li>
-                    <li>Fan the stack of paper before loading to prevent multiple sheets feeding at once.</li>
-                    <li>Use recommended paper type and size.</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Step 8 */}
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="md:w-1/4">
-                  <div className="flex items-center justify-center h-14 w-14 rounded-full bg-blue-100 text-blue-600 text-xl font-bold">
-                    8
-                  </div>
-                </div>
-                <div className="md:w-3/4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3 flex items-center">
-                    <FaDownload className="text-blue-500 mr-2" />
-                    Update Printer Drivers & Firmware
-                  </h3>
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                    <li>Go to your printer manufacturer's website (HP, Canon, Epson, etc.).</li>
-                    <li>Download the latest drivers and firmware for your model.</li>
-                    <li>Outdated drivers can cause connection errors or poor print quality.</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Step 9 */}
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="md:w-1/4">
-                  <div className="flex items-center justify-center h-14 w-14 rounded-full bg-blue-100 text-blue-600 text-xl font-bold">
-                    9
-                  </div>
-                </div>
-                <div className="md:w-3/4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3 flex items-center">
-                    <MdOutlineSettings className="text-blue-500 mr-2" />
-                    Check Printer Settings
-                  </h3>
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                    <li><strong>On Windows:</strong> Control Panel &gt; Devices and Printers &gt; Your Printer &gt; Printer Preferences.</li>
-                    <li><strong>On Mac:</strong> System Preferences &gt; Printers & Scanners.</li>
-                    <li>Ensure paper size, quality, and color settings match your needs.</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Step 10 */}
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="md:w-1/4">
-                  <div className="flex items-center justify-center h-14 w-14 rounded-full bg-blue-100 text-blue-600 text-xl font-bold">
-                    10
-                  </div>
-                </div>
-                <div className="md:w-3/4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3 flex items-center">
-                    <FaCog className="text-blue-500 mr-2" />
-                    Run Manufacturer's Diagnostic Tool
-                  </h3>
-                  <div className="bg-blue-50 rounded-lg p-4 mb-3">
-                    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                      {manufacturers.map((mfg, index) => (
-                        <div key={index} className="bg-white p-3 rounded-md shadow-sm">
-                          <p className="font-bold text-blue-600">{mfg.name}</p>
-                          <p className="text-sm text-gray-600">{mfg.tool}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <p className="text-gray-700">These automatically detect and fix common printer problems.</p>
-                </div>
-              </div>
-
-              {/* Step 11 */}
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="md:w-1/4">
-                  <div className="flex items-center justify-center h-14 w-14 rounded-full bg-blue-100 text-blue-600 text-xl font-bold">
-                    11
-                  </div>
-                </div>
-                <div className="md:w-3/4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3 flex items-center">
-                    <MdOutlineDevices className="text-blue-500 mr-2" />
-                    Test Printing from Another Device
-                  </h3>
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                    <li>Connect the printer to another computer or smartphone.</li>
-                    <li>If it works fine, the issue is with your original device — not the printer.</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Step 12 */}
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="md:w-1/4">
-                  <div className="flex items-center justify-center h-14 w-14 rounded-full bg-blue-100 text-blue-600 text-xl font-bold">
-                    12
-                  </div>
-                </div>
-                <div className="md:w-3/4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3 flex items-center">
-                    <MdOutlineFactory className="text-blue-500 mr-2" />
-                    Reset Printer to Factory Settings
-                  </h3>
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                    <li>In Settings &gt; Restore Defaults (location may vary by model).</li>
-                    <li>This clears old settings and fixes stubborn software errors.</li>
-                  </ul>
-                </div>
-              </div>
+      {/* Diagnostic Areas Section */}
+      <div className="max-w-6xl mx-auto bg-white/80 backdrop-blur-md rounded-3xl shadow-2xl p-10 border border-blue-100 mb-16">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-10 flex items-center justify-center gap-3">
+          <span className="text-green-500">✅</span>
+          Diagnostic Areas
+        </h2>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-200 hover:border-[#59c7b5] transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-green-500 text-xl">✔</span>
+              <h3 className="text-xl font-bold text-gray-800">Printing errors</h3>
             </div>
           </div>
-        </div>
 
-        {/* FAQ Section */}
-        <div className="bg-white shadow-xl rounded-2xl p-8 mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center flex items-center justify-center">
-            <FaQuestionCircle className="text-blue-500 mr-3" />
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-8">
-            <div className="border-b border-gray-200 pb-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">How often should I run printer diagnostics?</h3>
-              <p className="text-gray-700">Once every 2–3 months or whenever print quality drops.</p>
-            </div>
-            <div className="border-b border-gray-200 pb-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Will running diagnostics fix all problems?</h3>
-              <p className="text-gray-700">It can fix most common issues, but hardware damage may still require repairs.</p>
-            </div>
-            <div className="border-b border-gray-200 pb-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Do I need special tools for diagnostics?</h3>
-              <p className="text-gray-700">No — most printers have built-in tools and software for this.</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">What if diagnostics don't solve my problem?</h3>
-              <p className="text-gray-700">If diagnostics don't resolve your issue, it may indicate a more serious hardware problem that requires professional service.</p>
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-200 hover:border-[#59c7b5] transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-green-500 text-xl">✔</span>
+              <h3 className="text-xl font-bold text-gray-800">Slow printing</h3>
             </div>
           </div>
-        </div>
 
-        {/* CTA Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 text-center text-white">
-          <h2 className="text-3xl font-bold mb-4 flex items-center justify-center">
-            <FaHeadset className="mr-3" />
-            Still Having Printer Problems?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Our experts can run advanced diagnostics remotely and guide you step-by-step through any printer issue.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="tel:1-800-PRINT-DIAG"
-              className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-xl bg-white text-blue-600 hover:bg-gray-100 transition-colors"
-            >
-              📞 Call Support: 1-800-PRINT-DIAG
-            </a>
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-8 py-4 border border-white text-lg font-bold rounded-xl text-white hover:bg-blue-700 transition-colors"
-            >
-              💬 Get Expert Help Now
-            </a>
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-200 hover:border-[#59c7b5] transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-green-500 text-xl">✔</span>
+              <h3 className="text-xl font-bold text-gray-800">Paper jams</h3>
+            </div>
           </div>
-          <p className="mt-6 text-blue-200 font-medium">Quick remote assistance available 24/7</p>
-        </div>
 
-        {/* Additional Tips Section */}
-        <div className="mt-12 bg-white shadow-xl rounded-2xl p-8">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
-            Pro Maintenance Tips
-          </h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div className="bg-gray-50 p-6 rounded-xl">
-              <h3 className="text-xl font-semibold text-gray-800 mb-3 flex items-center">
-                <FaSyncAlt className="text-blue-500 mr-2" />
-                Regular Cleaning
-              </h3>
-              <p className="text-gray-700">Clean your printer monthly with a dry lint-free cloth to prevent dust buildup that can affect performance.</p>
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-200 hover:border-[#59c7b5] transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-green-500 text-xl">✔</span>
+              <h3 className="text-xl font-bold text-gray-800">Network issues</h3>
             </div>
-            <div className="bg-gray-50 p-6 rounded-xl">
-              <h3 className="text-xl font-semibold text-gray-800 mb-3 flex items-center">
-                <FaTint className="text-blue-500 mr-2" />
-                Ink Conservation
-              </h3>
-              <p className="text-gray-700">Use draft mode for everyday printing and print in grayscale when color isn't needed to extend ink life.</p>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-200 hover:border-[#59c7b5] transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-green-500 text-xl">✔</span>
+              <h3 className="text-xl font-bold text-gray-800">Software issues</h3>
             </div>
-            <div className="bg-gray-50 p-6 rounded-xl">
-              <h3 className="text-xl font-semibold text-gray-800 mb-3 flex items-center">
-                <FaPrint className="text-blue-500 mr-2" />
-                Prevent Clogs
-              </h3>
-              <p className="text-gray-700">Print a test page weekly if you don't use your printer often to keep ink flowing and prevent nozzle clogs.</p>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-200 hover:border-[#59c7b5] transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-green-500 text-xl">✔</span>
+              <h3 className="text-xl font-bold text-gray-800">Toner/ink problems</h3>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-200 hover:border-[#59c7b5] transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-green-500 text-xl">✔</span>
+              <h3 className="text-xl font-bold text-gray-800">Overheating</h3>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-200 hover:border-[#59c7b5] transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-green-500 text-xl">✔</span>
+              <h3 className="text-xl font-bold text-gray-800">Privacy/security settings</h3>
             </div>
           </div>
         </div>
       </div>
+
+      {/* CTA Section */}
+      <div className="text-center mt-20">
+        <h3 className="text-2xl font-bold text-gray-800 mb-4">
+          Need Professional Printer Diagnostics?
+        </h3>
+        <button className="bg-gradient-to-r from-[#59c7b5] to-[#0095d4] text-white px-8 py-4 rounded-xl font-semibold hover:scale-105 shadow-lg transition-transform duration-300">
+          Contact Our Support Team
+        </button>
+      </div>
+
+      {/* Footer */}
+     
     </div>
   );
 }

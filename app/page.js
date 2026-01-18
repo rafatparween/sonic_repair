@@ -1,34 +1,28 @@
-
 import Image from "next/image";
-import Contents from "./Components/Contents";
-import Navbar from "./Components/Navbar";
+
 import Header from "./Components/Header";
-import SliderPage from "./Components/SliderPage";
-import Digonode from "./Components/Digonode";
-import Footer from "./Components/Footer";
-import PrinterSetupGuide from "./Components/PrinterSetupGuide";
-import PrinterSetupSection from "./Components/PrinterSetupSection";
+import Banner from "./Components/Banner";
+import PrinterSupportOptions from "./Components/PrinterSupportOptions";
+// import PrinterProductList from "./Components/PrinterProductList";
 import JivoChat from "./JivoChat";
+import SupportSection from "./Components/SupportSection";
+import PrinterSetupSection from "./Components/PrinterSetupSection";
+import EnhancedPrinterSolutions from "./Components/EnhancedPrinterSolutions";
+
 
 export default function Home() {
   return (
     <>
-      <Navbar/>
-      <div className="mt-23">
-    <Header/>
-  </div>
-  <SliderPage/>
-  <PrinterSetupSection/>
-  <Digonode/>
-  <PrinterSetupGuide/>
-  <Footer/>
-  <JivoChat/>
-      {/* <Contents/> */}
-      
-      {/* <Footer/> */}
-      
-
-
+  
+      <Header/>
+      <SupportSection/>
+      <PrinterSetupSection/>
+      {/* <Banner/> */}
+      <PrinterSupportOptions/>
+      {/* <PrinterProductList/> */}
+      <EnhancedPrinterSolutions/>
+      <JivoChat/>
+    
     </>
   );
 }
