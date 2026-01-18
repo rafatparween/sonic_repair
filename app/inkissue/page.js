@@ -10,7 +10,7 @@ export default function InkCartridgeGuide() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12">
       <Head>
-        <title>Ink Cartridge Solutions | EzTech-Printer-Solutions</title>
+        <title>Ink Cartridge Solutions | Micro Sonic Repair</title>
       </Head>
 
       {/* Header */}

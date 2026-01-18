@@ -568,7 +568,7 @@ const PrivacyPolicy = () => {
                     <div className="space-y-3">
                       <div className="flex items-center">
                         <Email className="mr-3 text-[#59c7b5]" />
-                        <span>support@eztechprintersolutions.com</span>
+                        <span>support@microsonicrepair.com</span>
                       </div>
                       <div className="flex items-center">
                         <Phone className="mr-3 text-[#59c7b5]" />
@@ -576,7 +576,7 @@ const PrivacyPolicy = () => {
                       </div>
                       <div className="flex items-center">
                         <Business className="mr-3 text-[#59c7b5]" />
-                        <span>EZ Tech Printer Solutions LLC – United States</span>
+                        <span>Micro Sonic Repair – United States</span>
                       </div>
                     </div>
                   </div>
@@ -619,8 +619,8 @@ const privacyPolicyContent = [
   {
     sectionTitle: 'Privacy Policy',
     content: [
-      'EZ Tech Printer Solutions LLC ("Company", "We", "Us", "Our") respects your privacy and is committed to protecting your personal information.',
-      'This Privacy Policy explains how we collect, use, disclose, store, and safeguard your information when you visit www.eztechprintersolutions.com or use any of our technical support services.',
+      'Micro Sonic Repair ("Company", "We", "Us", "Our") respects your privacy and is committed to protecting your personal information.',
+      'This Privacy Policy explains how we collect, use, disclose, store, and safeguard your information when you visit www.microsonicrepair.com or use any of our technical support services.',
       'By accessing our website or requesting our services, you agree to the terms outlined in this Privacy Policy.',
     ],
   },
@@ -741,7 +741,7 @@ const privacyPolicyContent = [
       'Request a copy of information we hold about you',
       '',
       'You may contact us anytime at',
-      '📧 support@eztechprintersolutions.com',
+      '📧 support@microsonicrepair.com',
     ],
   },
   {
@@ -773,7 +773,7 @@ const privacyPolicyContent = [
   {
     sectionTitle: '11. No Brand Affiliation Disclosure',
     content: [
-      'EZ Tech Printer Solutions LLC is an independent service provider for printer and computer support.',
+      'Micro Sonic Repair is an independent service provider for printer and computer support.',
       'We are not affiliated with, endorsed by, or associated with any manufacturer or software company.',
       'All trademarks belong to their respective owners.',
       '',
@@ -783,7 +783,7 @@ const privacyPolicyContent = [
   {
     sectionTitle: '12. Business Transfers',
     content: [
-      'If EZ Tech Printer Solutions LLC is involved in a merger, sale, restructuring, or acquisition, your data may be transferred as part of the business assets—only if protected under this Privacy Policy.',
+      'If Micro Sonic Repair is involved in a merger, sale, restructuring, or acquisition, your data may be transferred as part of the business assets—only if protected under this Privacy Policy.',
     ],
   },
   {
@@ -798,9 +798,9 @@ const privacyPolicyContent = [
     content: [
       'If you have any questions or requests regarding this Privacy Policy, contact:',
       '',
-      '📧 support@eztechprintersolutions.com',
+      '📧 support@microsonicrepair.com',
       '📞 [Your Toll-Free Number:-(844) 491-5152]',
-      '🏢 EZ Tech Printer Solutions LLC – United States',
+      '🏢 Micro Sonic Repair – United States',
     ],
   },
 ];

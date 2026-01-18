@@ -7,7 +7,7 @@ export default function RefundPolicyPage() {
     {
       icon: Globe,
       title: "1. Nature of Our Services (No Physical Products)",
-      content: "EzTech Printer Solutions LLC provides remote technical support services including printer/computer/scanner troubleshooting, software guidance, network/Wi-Fi support, and step-by-step assistance.",
+      content: "Micro Sonic Repair provides remote technical support services including printer/computer/scanner troubleshooting, software guidance, network/Wi-Fi support, and step-by-step assistance.",
       points: [
         { type: "check", text: "Remote technical support" },
         { type: "check", text: "Printer/computer/scanner troubleshooting" },
@@ -99,7 +99,7 @@ export default function RefundPolicyPage() {
         { type: "list", text: "Date of service" },
         { type: "list", text: "Proof of unresolved issue (if applicable)" }
       ],
-      contact: "Send to: support@eztechprintersolutions.com or call (844) 491-5152",
+      contact: "Send to: support@microsonicrepair.com or call (844) 491-5152",
       disclaimer: "Refunds, once approved, will be processed within 5–10 business days."
     }
   ];
@@ -121,7 +121,7 @@ export default function RefundPolicyPage() {
             Last Updated: January 2025
           </p>
           <p className="text-lg text-gray-700 mt-4 max-w-3xl mx-auto">
-            This Refund, Return & Cancellation Policy applies to all services purchased from EzTech Printer Solutions LLC ("Company", "We", "Us", "Our"). By using our website or contacting our toll-free number (844) 491-5152, you agree to the terms below.
+            This Refund, Return & Cancellation Policy applies to all services purchased from Micro Sonic Repair ("Company", "We", "Us", "Our"). By using our website or contacting our toll-free number (844) 491-5152, you agree to the terms below.
           </p>
         </div>
       </section>
@@ -213,7 +213,7 @@ export default function RefundPolicyPage() {
                     <Mail className="w-5 h-5" />
                     <div>
                       <p className="font-semibold">Email</p>
-                      <p className="text-sm">support@eztechprintersolutions.com</p>
+                      <p className="text-sm">support@microsonicrepair.com</p>
                     </div>
                   </div>
                   
@@ -221,7 +221,7 @@ export default function RefundPolicyPage() {
                     <Globe className="w-5 h-5" />
                     <div>
                       <p className="font-semibold">Website</p>
-                      <p className="text-sm">https://eztechprintersolutions.com</p>
+                      <p className="text-sm">https://microsonicrepair.com</p>
                     </div>
                   </div>
                 </div>
@@ -251,7 +251,7 @@ export default function RefundPolicyPage() {
                     Call Now
                   </a>
                   <a 
-                    href="mailto:support@eztechprintersolutions.com" 
+                    href="mailto:support@microsonicrepair.com" 
                     className="w-full border-2 border-[#0095d4] text-[#0095d4] py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-blue-50 transition-all duration-300"
                   >
                     <Mail className="w-4 h-4" />
@@ -308,7 +308,7 @@ export default function RefundPolicyPage() {
               Call (844) 491-5152
             </a>
             <a 
-              href="mailto:support@eztechprintersolutions.com" 
+              href="mailto:support@microsonicrepair.com" 
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3"
             >
               <Mail className="w-5 h-5" />

@@ -62,7 +62,7 @@ export default function AboutPage() {
               </div>
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  <strong>EZ Tech Printer Solutions LLC</strong> is a U.S.-registered information-technology company that provides expert assistance for computers, printers, and connected devices.
+                  <strong>Micro Sonic Repair</strong> is a U.S.-registered information-technology company that provides expert assistance for computers, printers, and connected devices.
                 </p>
                 <p>
                  January 2024, we've helped customers nationwide through reliable technical support, clear communication, and step-by-step learning resources.
@@ -164,7 +164,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                       <div className="font-semibold text-gray-900">Registered Name</div>
-                      <div className="text-gray-600">EZ Tech Printer Solutions LLC</div>
+                      <div className="text-gray-600">Micro Sonic Repair</div>
                     </div>
                   </div>
 
@@ -200,7 +200,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                       <div className="font-semibold text-gray-900">Email</div>
-                      <div className="text-gray-600">support@eztechprintersolutions.com</div>
+                      <div className="text-gray-600">support@microsonicrepair.com</div>
                     </div>
                   </div>
 

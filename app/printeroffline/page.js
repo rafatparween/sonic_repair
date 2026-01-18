@@ -606,7 +606,7 @@ export default function PrinterTroubleshooting() {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     
-    alert('Your query has been submitted! Our EzTech-Printer-Solutions team will contact you shortly.');
+    alert('Your query has been submitted! Our Micro Sonic Repair team will contact you shortly.');
     setFormData({
       name: '',
       email: '',
@@ -620,8 +620,8 @@ export default function PrinterTroubleshooting() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Head>
-        <title>Printer Troubleshooting Guide | EzTech-Printer-Solutions</title>
-        <meta name="description" content="Professional printer troubleshooting and support from EzTech-Printer-Solutions experts" />
+        <title>Printer Troubleshooting Guide | Micro Sonic Repair</title>
+        <meta name="description" content="Professional printer troubleshooting and support from Micro Sonic Repair experts" />
       </Head>
 
       {/* Hero Section */}
@@ -946,7 +946,7 @@ export default function PrinterTroubleshooting() {
 
           {activeTab === 'expert-help' && (
             <div className="p-8">
-              <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Need Expert Help from EzTech-Printer-Solutions?</h2>
+              <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Need Expert Help from Micro Sonic Repair?</h2>
               
               <div className="grid lg:grid-cols-2 gap-8">
                 <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-100">
@@ -1036,7 +1036,7 @@ export default function PrinterTroubleshooting() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-3">
                     <Shield className="w-6 h-6 text-[#59c7b5]" />
-                    Why Choose EzTech-Printer-Solutions?
+                    Why Choose Micro Sonic Repair?
                   </h3>
                   <div className="space-y-4 mb-8">
                     {[
@@ -1107,7 +1107,7 @@ export default function PrinterTroubleshooting() {
           <div className="p-12 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Still Having Printer Problems?</h2>
             <p className="text-cyan-100 text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
-              Our certified EzTech-Printer-Solutions technicians are ready to provide professional solutions for all your printer issues.
+              Our certified Micro Sonic Repair technicians are ready to provide professional solutions for all your printer issues.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button

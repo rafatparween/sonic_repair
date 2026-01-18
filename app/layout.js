@@ -49,8 +49,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "eztechprintersolutions",
-  description: "eztechprintersolutions",
+  title: "Micro Sonic Repair",
+  description: "Micro Sonic Repair",
 };
 
 export default function RootLayout({ children }) {

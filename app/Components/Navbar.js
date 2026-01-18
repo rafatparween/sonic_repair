@@ -104,7 +104,7 @@ export default function Navbar() {
       <div className="max-w-[1360px] mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo + Nav */}
         <div className="flex items-center space-x-8">
-          <Image src="/epslogo.png" alt="HP Logo" width={150} height={150} className="hover:scale-105 transition-transform"/>
+          <Image src="/msr.png" alt="HP Logo" width={150} height={150} className="hover:scale-105 transition-transform"/>
           <div className="hidden md:flex space-x-12 text-[#767676] font-semibold text-base text-[20px]">
             <Link href="/" className="hover:text-black transition-colors duration-200">Explore</Link>
             <Link href="/" className="hover:text-black transition-colors duration-200">Shop</Link>

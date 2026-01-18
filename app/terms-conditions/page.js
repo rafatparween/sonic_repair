@@ -359,7 +359,7 @@ const TermsAndConditions = () => {
     <>
       <Head>
         <meta name="google-site-verification" content="YOUR_GOOGLE_ADS_CODE_HERE" />
-        <title>Terms & Conditions - EzTech Printer Solutions LLC</title>
+        <title>Terms & Conditions - Micro Sonic Repair</title>
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 py-16">
@@ -497,15 +497,15 @@ const TermsAndConditions = () => {
                         </div>
                         <div className="flex items-center">
                           <Email className="mr-3 text-[#59c7b5]" />
-                          <span>support@eztechprintersolutions.com</span>
+                          <span>support@microsonicrepair.com</span>
                         </div>
                         <div className="flex items-center">
                           <Language className="mr-3 text-[#59c7b5]" />
-                          <span>https://eztechprintersolutions.com</span>
+                          <span>https://microsonicrepair.com</span>
                         </div>
                         <div className="flex items-center">
                           <Business className="mr-3 text-[#59c7b5]" />
-                          <span>EzTech Printer Solutions LLC, California, USA</span>
+                          <span>Micro Sonic Repair LLC, California, USA</span>
                         </div>
                       </div>
                     </div>
@@ -546,7 +546,7 @@ const termsAndConditionsContent = [
   {
     sectionTitle: '1. Definitions',
     content: [
-      'Welcome to EzTech Printer Solutions LLC ("Company", "We", "Us", "Our"). These Terms & Conditions govern your access to and use of https://eztechprintersolutions.com and all services provided through our website, phone support, live chat, and remote assistance channels.',
+      'Welcome to Micro Sonic Repair LLC ("Company", "We", "Us", "Our"). These Terms & Conditions govern your access to and use of https://microsonicrepair.com and all services provided through our website, phone support, live chat, and remote assistance channels.',
       'By using our website or contacting our toll-free support line (844) 491-5152, you agree to these Terms. If you do not agree, please discontinue use immediately.'
     ],
     subSections: [
@@ -554,10 +554,10 @@ const termsAndConditionsContent = [
         subTitle: 'Key Definitions',
         content: [
           'Client / You / User – any individual or entity using our website or services.',
-          'Company / We / Us – EzTech Printer Solutions LLC, based in Ohio, United States.',
+          'Company / We / Us – Micro Sonic Repair LLC, based in Ohio, United States.',
           'Service – all support services, consultations, diagnostics, remote sessions, and informational resources provided through our website.',
           'Technician – our in-house or contracted technical experts delivering services.',
-          'Website – https://eztechprintersolutions.com.'
+          'Website – https://microsonicrepair.com.'
         ]
       }
     ]
@@ -582,7 +582,7 @@ const termsAndConditionsContent = [
   {
     sectionTitle: '3. Nature of Our Services',
     content: [
-      'EzTech Printer Solutions LLC provides independent technical assistance for various technology issues. We are not affiliated with any printer or computer manufacturer, unless expressly stated.'
+      'Micro Sonic Repair LLC provides independent technical assistance for various technology issues. We are not affiliated with any printer or computer manufacturer, unless expressly stated.'
     ],
     subSections: [
       {
@@ -669,7 +669,7 @@ const termsAndConditionsContent = [
   {
     sectionTitle: '7. Intellectual Property Rights',
     content: [
-      'All content on this website—including guides, layouts, design, text, logos, graphics, and instructions—is the property of EzTech Printer Solutions LLC.'
+      'All content on this website—including guides, layouts, design, text, logos, graphics, and instructions—is the property of Micro Sonic Repair.'
     ],
     subSections: [
       {
@@ -686,7 +686,7 @@ const termsAndConditionsContent = [
   {
     sectionTitle: '8. Limitation of Liability',
     content: [
-      'EzTech Printer Solutions LLC is not liable for various situations as outlined below. Maximum liability is limited to the amount paid by the user.'
+      'Micro Sonic Repair is not liable for various situations as outlined below. Maximum liability is limited to the amount paid by the user.'
     ],
     subSections: [
       {
@@ -741,9 +741,9 @@ const termsAndConditionsContent = [
         subTitle: 'Contact Details',
         content: [
           '📞 Toll-Free Support:(844) 491-5152',
-          '📧 Email: support@eztechprintersolutions.com',
-          '🌐 Website: https://eztechprintersolutions.com',
-          '🏢 EzTech Printer Solutions LLC, California, USA'
+          '📧 Email: support@microsonicrepair.com',
+          '🌐 Website: https://microsonicrepair.com',
+          '🏢 Micro Sonic Repair LLC, California, USA'
         ]
       }
     ]

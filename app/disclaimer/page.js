@@ -35,7 +35,7 @@ export default function DisclaimerPage() {
               </div>
               <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
                 <p className="text-gray-700 leading-relaxed">
-                  EZ Tech Printer Solutions LLC ("we," "our," or "the company") is an independent provider of technical support and informational content for computers, printers, scanners, smart devices, and related peripherals.
+                  Micro Sonic Repair ("we," "our," or "the company") is an independent provider of technical support and informational content for computers, printers, scanners, smart devices, and related peripherals.
                 </p>
                 <p className="text-gray-700 leading-relaxed mt-4">
                   We are not affiliated with, endorsed by, or representing any hardware or software manufacturer, unless specifically stated.
@@ -67,7 +67,7 @@ export default function DisclaimerPage() {
               </div>
               <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
                 <p className="text-gray-700 leading-relaxed">
-                  All services offered by EZ Tech Printer Solutions LLC are independent and performed by our in-house or contracted technicians.
+                  All services offered by Micro Sonic Repair are independent and performed by our in-house or contracted technicians.
                 </p>
                 <p className="text-gray-700 leading-relaxed mt-4">
                   We provide troubleshooting, diagnosis, setup assistance, driver support, device connectivity support, and general technical guidance.
@@ -134,7 +134,7 @@ export default function DisclaimerPage() {
               </div>
               <div className="bg-red-50 rounded-2xl p-6 border border-red-200">
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  To the fullest extent permitted by law, EZ Tech Printer Solutions LLC is not liable for any indirect, incidental, or consequential loss or damage arising from:
+                  To the fullest extent permitted by law, Micro Sonic Repair is not liable for any indirect, incidental, or consequential loss or damage arising from:
                 </p>
                 <ul className="text-gray-700 space-y-2 ml-6">
                   <li>• Use of our website</li>
@@ -166,7 +166,7 @@ export default function DisclaimerPage() {
             <div className="text-center border-t border-gray-300 pt-12">
               <div className="space-y-4 text-gray-600">
                 <p className="text-lg font-semibold">Last Updated: November 2025</p>
-                <p className="text-xl">© 2025 EZ Tech Printer Solutions LLC. All Rights Reserved.</p>
+                <p className="text-xl">© 2025 Micro Sonic Repair. All Rights Reserved.</p>
               </div>
               
               {/* Quick Links */}

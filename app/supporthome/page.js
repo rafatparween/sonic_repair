@@ -40,7 +40,7 @@ export default function SupportHome() {
     },
     {
       question: "How can I contact your technical team?",
-      answer: "You can reach out via live chat or email at support@hewletthubsolutions.com"
+      answer: "You can reach out via live chat or email at support@microsonicrepair.com"
     }
   ];
 
@@ -62,7 +62,7 @@ export default function SupportHome() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-blue-50 text-gray-800">
       <Head>
-        <title>Support | EzTech-Printer-Solutions</title>
+        <title>Support | Micro Sonic Repair</title>
       </Head>
 
       {/* Hero Section */}
@@ -179,7 +179,7 @@ export default function SupportHome() {
         <section className=" text-white rounded-2xl py-16 text-center shadow-xl" style={{ background: "linear-gradient(to right, #59c7b5, #0095d4)" }}>
           <div className="max-w-3xl mx-auto">
             <FiUsers className="w-14 h-14 mx-auto mb-4 text-white/80" />
-            <h2 className="text-3xl font-bold mb-2">Join the EzTech-Printer-Solutions Community</h2>
+            <h2 className="text-3xl font-bold mb-2">Join the Micro Sonic Repair Community</h2>
             <p className="text-blue-100 mb-6">Ask, learn, and grow with others just like you.</p>
             <button className="bg-white text-blue-700 font-medium px-6 py-3 rounded-full shadow hover:scale-105 transition">
               Visit Community
